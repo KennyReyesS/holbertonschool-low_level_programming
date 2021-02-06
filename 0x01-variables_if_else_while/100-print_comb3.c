@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-	int n1, n2;
+	int i, j;
 
-	for (n1 = 48; n1 < 58; n1++)
+	for (i = 48; i < 58; i++)
 	{
-		for (n2 = n1 + 1; n2 < 58; n2++)
+		for (j = i + 1; j < 58; j++)
 		{
-			putchar(n1);
-			putchar(n2);
+			putchar(i);
+			putchar(j);
 
-			if (n1 == 56 && n2 == 57)
+			if (i == 56 && j == 57)
 			{
 			}
 			else
