@@ -1,11 +1,20 @@
-#include <stdio.h>
+#include "holberton.h"
 /**
- *main - Prints "Holberton".
+ *main - Prints "Holberton" and a new line.
  *
  *Return: 0
  */
 int main(void)
 {
-	printf("Holberton\n");
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
 	return (0);
 }
