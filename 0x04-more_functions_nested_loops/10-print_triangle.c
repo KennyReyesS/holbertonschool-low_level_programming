@@ -15,20 +15,4 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (h = size; h > 0; h--)
-		{
-			for (s = 1; s <= size; s++)
-			{
-				if (s < h)
-				{
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar('#');
-				}
-			}
-			_putchar('\n');
-		}
-	}
-}
+		for
