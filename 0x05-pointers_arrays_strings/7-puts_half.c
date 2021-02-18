@@ -1,9 +1,15 @@
 #include "holberton.h"
+/**
+ *puts_half - prints half of a string, followed by a new line.
+ *@str: 0123456789'\0'
+ *Return: 0
+ */
 void puts_half(char *str)
 {
 	int n;
 	int length;
 
+	n = 0;
 	while (str[n] != '\0')
 	{
 		n++;
