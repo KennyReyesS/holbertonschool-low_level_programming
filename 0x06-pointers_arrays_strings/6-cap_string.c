@@ -6,7 +6,7 @@
  */
 int fn_es_separador(char c)
 {
-	int i;
+	int i = 0;
 	int numSeparadores = 13;
 	char separadores[] = {' ', '\t', '\n', ',',
 			       ';', '.', '!', '?', '\"',
