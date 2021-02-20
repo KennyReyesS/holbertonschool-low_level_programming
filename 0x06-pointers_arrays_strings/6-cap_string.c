@@ -7,13 +7,14 @@
 int fn_es_separador(char c)
 {
 	int i;
+	int numSeparadores = 13;
 	char separadores[] = {' ', '\t', '\n', ',',
 			       ';', '.', '!', '?', '\"',
 			       '(', ')', '{', '}'};
 
-	for (i = 0; i <= 12; i++)
+	while (i < numSeparadores)
 	{
-		if (c == separadores[i])
+		if (c == separadores[i++])
 		{
 			return (1);
 		}
@@ -28,23 +29,21 @@ int fn_es_separador(char c)
  */
 char *cap_string(char *str)
 {
-	int i;
-	int separador_pasado;
+	int i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
-		if (fn_es_separador(str[i]))
-		{
-			separador_pasado = 1;
-		}
-		else if (separador_pasado == 1)
+		if (i == 0)
 		{
 			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = str[i] - 32;
-			}
-			separador_pasado = 0;
+				str[i] -= 32;
 		}
+		if (fn_es_separador(str[i]))
+		{
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] -= 32;
+		}
+		i++;
 	}
 	return (str);
 }
