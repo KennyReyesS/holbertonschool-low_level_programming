@@ -11,9 +11,9 @@ char *leet(char *s)
 	char letr[] = "aAeEoOtTlL";
 	char numb[] = "4433007711";
 
-	for (i = 0; s[i]; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 6; j++)
+		for (j = 0; j <= 9; j++)
 		{
 			if (letr[j] == s[i])
 			{
