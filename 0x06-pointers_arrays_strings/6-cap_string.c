@@ -11,7 +11,7 @@ int fn_es_separador(char c)
 			       ';', '.', '!', '?', '\"',
 			       '(', ')', '{', '}'};
 
-	for (i = 0; i <= 13; i++)
+	for (i = 0; i <= 12; i++)
 	{
 		if (c == separadores[i])
 		{
