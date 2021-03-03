@@ -25,7 +25,7 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int str1, str2, str3, i;
+	unsigned int str1, str2, str3, i;
 	char *a;
 
 	str1 = _strlen(s1);
@@ -41,9 +41,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		a[i] = s1[i];
 	}
-	for (; i < str1 + str2; i++)
+	for (i = 0; i < str2; i++)
 	{
-		a[i] = s2[i - str1];
+		a[i + str1] = s2[i];
 	}
+	a[str3] = '\0';
 	return (a);
 }
