@@ -28,6 +28,15 @@ char *str_concat(char *s1, char *s2)
 	unsigned int str1, str2, str3, i;
 	char *a;
 
+	if (s1 == NULL)
+	{
+		return (NULL);
+	}
+	if (s2 == NULL)
+	{
+		return (NULL);
+	}
+
 	str1 = _strlen(s1);
 	str2 = _strlen(s2);
 	str3 = str1 + str2 + 1;
