@@ -25,23 +25,21 @@ int _strlen(char *s)
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int str1, str2, str3, i;
+	int str1, str2, i;
 	char *a;
 
 	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = "";
 	}
 	if (s2 == NULL)
 	{
-		return (NULL);
+		s2 = "";
 	}
-
 	str1 = _strlen(s1);
-	str2 = _strlen(s2);
-	str3 = str1 + str2 + 1;
-	a = malloc(str3);
+	str2 = _strlen(s2) + 1;
 
+	a = malloc(str1 + str2);
 	if (a == NULL)
 	{
 		return (NULL);
@@ -50,10 +48,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		a[i] = s1[i];
 	}
-	for (i = 0; i < str2; i++)
+	for (; i < str1 + str2; i++)
 	{
-		a[i + str1] = s2[i];
+		a[i] = s2[i - str1];
 	}
-	a[str3] = '\0';
 	return (a);
 }
