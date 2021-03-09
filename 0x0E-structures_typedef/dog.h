@@ -3,7 +3,7 @@
 
 #include <stdlib.h>
 /**
- *struct - dog data
+ *struct dog - dog data
  *@name: name of dog
  *@age: age of dog
  *@owner: owner of dog
