@@ -25,7 +25,7 @@ unsigned int binary_to_uint(const char *b)
 			i++;
 		}
 		lastIndex = i - 1;
-		
+
 		while (lastIndex >= 0)
 		{
 			if (b[lastIndex] == '0')
@@ -37,7 +37,7 @@ unsigned int binary_to_uint(const char *b)
 				bit = 1;
 			}
 			result += bit << j;
-			
+
 			lastIndex--;
 			j++;
 		}
